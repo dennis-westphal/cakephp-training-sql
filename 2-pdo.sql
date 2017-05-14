@@ -8,19 +8,19 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
 -- -----------------------------------------------------
--- Schema cakephp
+-- Schema cars
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema cakephp
+-- Schema cars
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `cakephp` DEFAULT CHARACTER SET utf8 ;
-USE `cakephp` ;
+CREATE SCHEMA IF NOT EXISTS `cars` DEFAULT CHARACTER SET utf8 ;
+USE `cars` ;
 
 -- -----------------------------------------------------
 -- Table `cakephp`.`cars`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `cakephp`.`cars` (
+CREATE TABLE IF NOT EXISTS `cars`.`cars` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `owner` VARCHAR(255) NOT NULL,
   `model` VARCHAR(255) NOT NULL,
@@ -38,8 +38,8 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- Data for table `cakephp`.`cars`
 -- -----------------------------------------------------
 START TRANSACTION;
-USE `cakephp`;
-INSERT INTO `cakephp`.`cars` (`id`, `owner`, `model`, `horsePower`, `color`) VALUES (1, 'Dennis Westphal', 'Tesla Model S', 463, 'white');
+USE `cars`;
+INSERT INTO `cars`.`cars` (`id`, `owner`, `model`, `horsePower`, `color`) VALUES (1, 'Dennis Westphal', 'Tesla Model S', 463, 'white');
 
 COMMIT;
 
