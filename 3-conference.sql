@@ -69,7 +69,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `cakephp`.`presentations` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `topic_id` INT UNSIGNED NOT NULL,
-  `rooms_id` INT UNSIGNED NULL DEFAULT NULL,
+  `rooms_id` INT UNSIGNED NOT NULL,
   `date` DATETIME NOT NULL,
   `freeSpots` INT UNSIGNED NOT NULL,
   PRIMARY KEY (`id`),
@@ -83,7 +83,7 @@ CREATE TABLE IF NOT EXISTS `cakephp`.`presentations` (
   CONSTRAINT `fk_presentations_rooms1`
     FOREIGN KEY (`rooms_id`)
     REFERENCES `cakephp`.`rooms` (`id`)
-    ON DELETE SET NULL
+    ON DELETE CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
