@@ -119,8 +119,8 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `cakephp`;
-INSERT INTO `cakephp`.`users` (`id`, `username`, `$2y$10$wPmpJHWxdD7NVXsvxuNaVeWxsia1wfInGYYyr4S1Sl71bHjRnH/.a`, `type`, `name`, `surname`, `created`, `modified`) VALUES (1, 'dennis.westphal', 'password', 'author', 'Dennis', 'Westphal', '2017-05-14 17:11:00', '2017-05-14 17:11:00');
-INSERT INTO `cakephp`.`users` (`id`, `username`, `$2y$10$T.cCIy4vt5SYmDHhZx2Mte1GJ8rYJim1oTcaNK.q3RpBrSo94ScJ2`, `type`, `name`, `surname`, `created`, `modified`) VALUES (2, 'jacob.eberhardt', 'password', 'author', 'Jacob', 'Eberhardt', '2017-05-14 17:11:00', '2017-05-14 17:11:00');
+INSERT INTO `cakephp`.`users` (`id`, `username`, `password`, `type`, `name`, `surname`, `created`, `modified`) VALUES (1, 'dennis.westphal', '$2y$10$wPmpJHWxdD7NVXsvxuNaVeWxsia1wfInGYYyr4S1Sl71bHjRnH/.a', 'author', 'Dennis', 'Westphal', '2017-05-14 17:11:00', '2017-05-14 17:11:00');
+INSERT INTO `cakephp`.`users` (`id`, `username`, `password`, `type`, `name`, `surname`, `created`, `modified`) VALUES (2, 'jacob.eberhardt', '$2y$10$T.cCIy4vt5SYmDHhZx2Mte1GJ8rYJim1oTcaNK.q3RpBrSo94ScJ2', 'author', 'Jacob', 'Eberhardt', '2017-05-14 17:11:00', '2017-05-14 17:11:00');
 
 COMMIT;
 
