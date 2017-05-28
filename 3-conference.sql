@@ -32,6 +32,15 @@ CREATE TABLE IF NOT EXISTS `cakephp`.`users` (
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
+-- -----------------------------------------------------
+-- Table `cakephp`.`rooms`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `cakephp`.`rooms` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
 
 -- -----------------------------------------------------
 -- Table `cakephp`.`topics`
@@ -60,13 +69,20 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `cakephp`.`presentations` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `topic_id` INT UNSIGNED NOT NULL,
+  `rooms_id` INT UNSIGNED NOT NULL,
   `date` DATETIME NOT NULL,
   `freeSpots` INT UNSIGNED NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_presentations_topics1_idx` (`topic_id` ASC),
+  INDEX `fk_presentations_rooms1_idx` (`rooms_id` ASC),
   CONSTRAINT `fk_presentations_topics1`
     FOREIGN KEY (`topic_id`)
     REFERENCES `cakephp`.`topics` (`id`)
+    ON DELETE CASCADE
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_presentations_rooms1`
+    FOREIGN KEY (`rooms_id`)
+    REFERENCES `cakephp`.`rooms` (`id`)
     ON DELETE CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -108,6 +124,16 @@ INSERT INTO `cakephp`.`users` (`id`, `username`, `$2y$10$T.cCIy4vt5SYmDHhZx2Mte1
 
 COMMIT;
 
+-- -----------------------------------------------------
+-- Data for table `cakephp`.`rooms`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `cakephp`;
+INSERT INTO `cakephp`.`rooms` (`id`, `name`) VALUES (1, 'Hannover');
+INSERT INTO `cakephp`.`rooms` (`id`, `name`) VALUES (2, 'Berlin');
+
+COMMIT;
+
 
 -- -----------------------------------------------------
 -- Data for table `cakephp`.`topics`
@@ -128,9 +154,9 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `cakephp`;
-INSERT INTO `cakephp`.`presentations` (`id`, `topic_id`, `date`, `freeSpots`) VALUES (1, 1, '2017-06-20 10:00:00', 8);
-INSERT INTO `cakephp`.`presentations` (`id`, `topic_id`, `date`, `freeSpots`) VALUES (2, 1, '2017-06-21 10:00:00', 8);
-INSERT INTO `cakephp`.`presentations` (`id`, `topic_id`, `date`, `freeSpots`) VALUES (3, 1, '2017-06-21 10:00:00', 8);
+INSERT INTO `cakephp`.`presentations` (`id`, `topic_id`, `date`, `freeSpots`) VALUES (1, 1, 1, '2017-06-20 10:00:00', 8);
+INSERT INTO `cakephp`.`presentations` (`id`, `topic_id`, `date`, `freeSpots`) VALUES (2, 1, 2, '2017-06-21 10:00:00', 8);
+INSERT INTO `cakephp`.`presentations` (`id`, `topic_id`, `date`, `freeSpots`) VALUES (3, 1, 1, '2017-06-21 10:00:00', 8);
 
 COMMIT;
 
