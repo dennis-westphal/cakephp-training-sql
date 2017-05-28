@@ -82,7 +82,7 @@ CREATE TABLE IF NOT EXISTS `cakephp`.`presentations` (
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_presentations_room1`
     FOREIGN KEY (`room_id`)
-    REFERENCES `cakephp`.`room` (`id`)
+    REFERENCES `cakephp`.`rooms` (`id`)
     ON DELETE CASCADE
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
