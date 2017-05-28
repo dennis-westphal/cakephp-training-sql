@@ -74,7 +74,7 @@ CREATE TABLE IF NOT EXISTS `cakephp`.`presentations` (
   `freeSpots` INT UNSIGNED NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_presentations_topics1_idx` (`topic_id` ASC),
-  INDEX `fk_presentations_rooms1_idx` (`rooms_id` ASC),
+  INDEX `fk_presentations_room1_idx` (`room_id` ASC),
   CONSTRAINT `fk_presentations_topics1`
     FOREIGN KEY (`topic_id`)
     REFERENCES `cakephp`.`topics` (`id`)
