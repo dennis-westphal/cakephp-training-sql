@@ -154,9 +154,9 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `cakephp`;
-INSERT INTO `cakephp`.`presentations` (`id`, `topic_id`, `date`, `freeSpots`) VALUES (1, 1, 1, '2017-06-20 10:00:00', 8);
-INSERT INTO `cakephp`.`presentations` (`id`, `topic_id`, `date`, `freeSpots`) VALUES (2, 1, 2, '2017-06-21 10:00:00', 8);
-INSERT INTO `cakephp`.`presentations` (`id`, `topic_id`, `date`, `freeSpots`) VALUES (3, 1, 1, '2017-06-21 10:00:00', 8);
+INSERT INTO `cakephp`.`presentations` (`id`, `topic_id`, `room_id`, `date`, `freeSpots`) VALUES (1, 1, 1, '2017-06-20 10:00:00', 8);
+INSERT INTO `cakephp`.`presentations` (`id`, `topic_id`, `room_id`, `date`, `freeSpots`) VALUES (2, 1, 2, '2017-06-21 10:00:00', 8);
+INSERT INTO `cakephp`.`presentations` (`id`, `topic_id`, `room_id`, `date`, `freeSpots`) VALUES (3, 1, 1, '2017-06-21 10:00:00', 8);
 
 COMMIT;
 
