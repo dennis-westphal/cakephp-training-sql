@@ -114,11 +114,11 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `cakephp`;
-INSERT INTO `cakephp`.`topics` (`id`, `author_id`, `title`, `teaser`, `description`, `created`, `modified`) VALUES (1, 1, 'Web applications with CakePHP', 'Introduction to the CakePHP framework', '<p>In this presentation, the author is going to give a brief overview on how to create web applications using the CakePHP 3.4 framework.</p>\n<p>Key components of this presentation include:</p>\n<ul>\n<li>Introduction to MVC</li>\n<li>Convention over configuration</li>\n<li>Structure of CakePHP</li>\n<li>Best practices</li>\n</ul>', '2017-05-14 17:15:00', '2017-05-14 17:15:00');
-INSERT INTO `cakephp`.`topics` (`id`, `author_id`, `title`, `teaser`, `description`, `created`, `modified`) VALUES (2, 1, 'PHP basics', 'Basics of development in PHP, including introduction to OOP', ' ', '2017-05-14 17:15:00', '2017-05-14 17:15:00');
-INSERT INTO `cakephp`.`topics` (`id`, `author_id`, `title`, `teaser`, `description`, `created`, `modified`) VALUES (3, 1, 'Mobile applications with Angular.js', 'Learn how to develop applications for mobile and desktop', ' ', '2017-05-14 17:15:00', '2017-05-14 17:15:00');
-INSERT INTO `cakephp`.`topics` (`id`, `author_id`, `title`, `teaser`, `description`, `created`, `modified`) VALUES (4, 1, 'SCRUM: Agile development', 'Leverage the advantages of a modern development structure', ' ', '2017-05-14 17:15:00', '2017-05-14 17:15:00');
-INSERT INTO `cakephp`.`topics` (`id`, `author_id`, `title`, `teaser`, `description`, `created`, `modified`) VALUES (5, 2, 'Java Enterprise Edition', 'Develop enterprise-grade applications with Java EE', ' ', '2017-05-14 17:15:00', '2017-05-14 17:15:00');
+INSERT INTO `cakephp`.`topics` (`id`, `author_id`, `title`, `teaser`, `description`, `created`, `modified`) VALUES (1, 1, 'Web applications with CakePHP', 'Introduction to the CakePHP framework', '<p>In this presentation, the author is going to give a brief overview on how to create web applications using the CakePHP 3.4 framework.</p>\n<p>Key components of this presentation include:</p>\n<ul>\n<li>Introduction to MVC</li>\n<li>Convention over configuration</li>\n<li>Structure of CakePHP</li>\n<li>Best practices</li>\n</ul>', '2017-05-14 17:12:00', '2017-05-14 17:12:00');
+INSERT INTO `cakephp`.`topics` (`id`, `author_id`, `title`, `teaser`, `description`, `created`, `modified`) VALUES (2, 1, 'PHP basics', 'Basics of development in PHP, including introduction to OOP', ' ', '2017-05-14 16:15:00', '2017-05-14 16:15:00');
+INSERT INTO `cakephp`.`topics` (`id`, `author_id`, `title`, `teaser`, `description`, `created`, `modified`) VALUES (3, 1, 'Mobile applications with Angular.js', 'Learn how to develop applications for mobile and desktop', ' ', '2017-05-14 14:15:00', '2017-05-14 14:15:00');
+INSERT INTO `cakephp`.`topics` (`id`, `author_id`, `title`, `teaser`, `description`, `created`, `modified`) VALUES (4, 1, 'SCRUM: Agile development', 'Leverage the advantages of a modern development structure', ' ', '2017-05-14 18:15:00', '2017-05-14 18:15:00');
+INSERT INTO `cakephp`.`topics` (`id`, `author_id`, `title`, `teaser`, `description`, `created`, `modified`) VALUES (5, 2, 'Java Enterprise Edition', 'Develop enterprise-grade applications with Java EE', ' ', '2017-05-14 12:15:00', '2017-05-14 12:15:00');
 
 COMMIT;
 
