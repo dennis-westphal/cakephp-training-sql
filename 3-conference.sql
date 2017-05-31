@@ -71,7 +71,7 @@ CREATE TABLE IF NOT EXISTS `cakephp`.`presentations` (
   `topic_id` INT UNSIGNED NOT NULL,
   `room_id` INT UNSIGNED NOT NULL,
   `date` DATETIME NOT NULL,
-  `freeSpots` INT UNSIGNED NOT NULL,
+  `freeSpots` INT UNSIGNED NOT NULL DEFAULT 8,
   PRIMARY KEY (`id`),
   INDEX `fk_presentations_topics1_idx` (`topic_id` ASC),
   INDEX `fk_presentations_room1_idx` (`room_id` ASC),
